@@ -7,22 +7,17 @@ function add() {
 
 function jQSubmit() {
     var data = {};
-    data.id = document.getElementById('stuId1').value;
-    data.name = document.getElementById('name1').value;
-    data.insitute= document.getElementById('colg1').value;
-    data.majo = document.getElementById('profession1').value;
-    data.grade = document.getElementById('grade1').value;
-    data.clazz = document.getElementById('stuClass1').value;
-    data.age = document.getElementById('age1').value;
-    var sexSelect = document.getElementById('sex1');
-    var sexIndex = sexSelect.selectedIndex;
-    data.sex = sexSelect.options[sexIndex].value;
+    data.id = document.getElementById('groupId1').value;
+    data.grade = document.getElementById('deptId1').value;
+    data.clazz = document.getElementById('managerId1').value;
+    data.age = document.getElementById('leaderId1').value;
+
 
     //获取url
     var protocol = window.location.protocol;
     var host = window.location.host;
     var proName = window.location.pathname.split("/")[1];
-    var url = protocol + "//" + host + "/" + proName + "/studentController/addStudent";
+    var url = protocol + "//" + host + "/" + proName + "/groupController/addGroup";
 
     $.ajax({
         type : 'post',
@@ -54,16 +49,10 @@ function sumbit() {
     // 获取表
     var iTable = document.getElementById('myTable');
     // 获取输入值
-    var stuId = document.getElementById('stuId1').value;
-    var name = document.getElementById('name1').value;
-    var colg = document.getElementById('colg1').value;
-    var profession = document.getElementById('profession1').value;
-    var grade = document.getElementById('grade1').value;
-    var stuClass = document.getElementById('stuClass1').value;
-    var age = document.getElementById('age1').value;
-    var sexSelect = document.getElementById('sex1');
-    var sexIndex = sexSelect.selectedIndex;
-    var sex = sexSelect.options[sexIndex].value;
+    var stuId = document.getElementById('groupId1').value;
+    var grade = document.getElementById('deptId1').value;
+    var stuClass = document.getElementById('managerId1').value;
+    var age = document.getElementById('leaderId1').value;
     var nums = iTable.rows.length;
 
 
@@ -88,15 +77,6 @@ function sumbit() {
     var iTd3 = document.createElement('td');
     iTd3.className = "col3";
     iTd3.appendChild(document.createTextNode(stuId));
-    var iTd4 = document.createElement('td');
-    iTd4.className = "col4";
-    iTd4.appendChild(document.createTextNode(name));
-    var iTd5 = document.createElement('td');
-    iTd5.className = "col5";
-    iTd5.appendChild(document.createTextNode(colg));
-    var iTd6 = document.createElement('td');
-    iTd6.className = "col6";
-    iTd6.appendChild(document.createTextNode(profession));
     var iTd7 = document.createElement('td');
     iTd7.className = "col7";
     iTd7.appendChild(document.createTextNode(grade));
@@ -108,9 +88,6 @@ function sumbit() {
     iTd9.appendChild(document.createTextNode(age));
     var iTd10 = document.createElement('td');
     iTd10.className = "col10";
-    var iTd11 = document.createElement('td');
-    iTd11.className = "col11";
-    iTd11.appendChild(document.createTextNode(sex));
     var examine = document.createElement('input');
     examine.id = 'examine';
     examine.setAttribute('type','button');
@@ -134,25 +111,17 @@ function sumbit() {
     // iTr.appendChild(iTd1);
     iTr.appendChild(iTd2);
     iTr.appendChild(iTd3);
-    iTr.appendChild(iTd4);
-    iTr.appendChild(iTd11);
     iTr.appendChild(iTd9);
-    iTr.appendChild(iTd5);
-    iTr.appendChild(iTd6);
     iTr.appendChild(iTd7);
     iTr.appendChild(iTd8);
     iTr.appendChild(iTd10);
 
 
     // 将新增框架中的输入框值初始化
-    document.getElementById('stuId1').value = null;
-    document.getElementById('name1').value = null;
-    document.getElementById('colg1').value = null;
-    document.getElementById('profession1').value = null;
-    document.getElementById('grade1').value = null;
-    document.getElementById('stuClass1').value = null;
-    document.getElementById('age1').value = null;
-    document.getElementById('sex1').value = null;
+    document.getElementById('groupId1').value = null;
+    document.getElementById('deptId1').value = null;
+    document.getElementById('managerId1').value = null;
+    document.getElementById('leaderId1').value = null;
     document.getElementById('nums').innerText = nums;
 
     range();

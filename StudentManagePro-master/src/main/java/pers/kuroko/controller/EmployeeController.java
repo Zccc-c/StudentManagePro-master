@@ -23,7 +23,7 @@ public class EmployeeController {
     public String getAllEmployee(Map<String, List<Employee>> map){
         List<Employee> employees = employeeService.queryAllEmployee();
         map.put("employees",employees);
-        return "homePage";
+        return "EmployeehomePage";
     }
 
     @ResponseBody

@@ -22,7 +22,7 @@ public class ManagerController {
     public String getAllManager(Map<String, List<Manager>> map){
         List<Manager> managers = managerService.queryAllManager();
         map.put("managers",managers);
-        return "homePage";
+        return "ManagerhomePage";
     }
 
     @ResponseBody

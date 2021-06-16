@@ -21,7 +21,7 @@ public class DepartmentController {
     public String getAllDepartment(Map<String, List<Department>> map){
         List<Department> departments =departmentService.queryAllDepartment();
         map.put("departments",departments);
-        return "homePage";
+        return "DepartmenthomePage";
     }
 
     @ResponseBody

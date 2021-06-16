@@ -83,7 +83,7 @@
 <div >
     <div class="login-box">
         <form action="loginController/homePage" method="post" name="f">
-            <h2>学生管理系统-登录</h2>
+            <h2>管理系统-登录</h2>
             <div class="login-field">
                 <img src="<%= basePath%>img/user.png"  />
                 <input type="text" placeholder="请输入用户名" name="username" id="username" />

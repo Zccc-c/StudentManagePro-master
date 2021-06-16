@@ -22,7 +22,7 @@ public class LeaderController {
     public String getAllLeader(Map<String, List<Leader>> map){
         List<Leader> leaders = leaderService.queryAllLeader();
         map.put("leaders",leaders);
-        return "homePage";
+        return "LeaderhomePage";
     }
 
     @ResponseBody

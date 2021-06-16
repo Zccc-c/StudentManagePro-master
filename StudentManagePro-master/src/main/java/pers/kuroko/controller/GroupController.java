@@ -22,7 +22,7 @@ public class GroupController {
     public String getAllGroup(Map<String, List<Group>> map){
         List<Group> groups = groupService.queryAllGroup();
         map.put("groups",groups);
-        return "homePage";
+        return "GrouphomePage";
     }
 
     @ResponseBody
