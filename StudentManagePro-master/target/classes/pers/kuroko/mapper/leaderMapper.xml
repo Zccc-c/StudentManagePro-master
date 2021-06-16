@@ -2,19 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pers.kuroko.mapper.LeaderMapper">
     <select id="queryLeaderById" parameterType="int" resultType="Leader">
-        select * from leader where leaderid = #{leaderid}
+        select * from leader where leaderId = #{leaderId}
     </select>
     <select id="queryAllLeader" resultType="leader">
         select * from leader
     </select>
     <insert id="addLeader" parameterType="Employee">
-        insert into leader(groupid,leaderid,leadername,leadergender,leaderemail) values (#{groupid}, #{leaderid}, #{leadername},#{leadergender},#{leaderemail})
+        insert into leader(groupId,leaderId,leaderName,leaderGender,leaderEmail) values (#{groupId}, #{leaderId}, #{leaderName},#{leaderGender},#{leaderEmail})
     </insert>
     <delete id="deleteLeaderById" parameterType="int">
-        delete from leader where leaderid = #{id}
+        delete from leader where leaderId = #{id}
     </delete>
     <update id="updateLeader" parameterType="Leader">
-        update leader set groupid = #{groupid},leadername = #{leadername},leadergender = #{leadergender},leaderemail = #{leaderemail} where leaderid = #{leaderid}
+        update leader set groupId = #{groupId},leaderName = #{leaderName},leaderGender = #{leaderGender},leaderEmail = #{leaderEmail} where leaderId = #{leaderId}
     </update>
 
 </mapper>

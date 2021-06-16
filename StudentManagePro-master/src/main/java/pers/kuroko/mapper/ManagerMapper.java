@@ -11,7 +11,7 @@ public interface ManagerMapper {
 
     int addManager(Manager manager);
 
-    int deleteManagerById(int id);
+    int deleteManagerById(int managerId);
 
     int updateManager(Manager manager);
 }

@@ -9,9 +9,9 @@ public interface EmployeeMapper {
 
     public int addEmployee(Employee employee);
 
-    public int deleteEmployeeById(int id);
+    public int deleteEmployeeById(int empId);
 
     public int updateEmployee(Employee employee);
 
-    public Employee queryEmployeeById(int id);
+    public Employee queryEmployeeById(int empId);
 }

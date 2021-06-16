@@ -3,7 +3,7 @@ function deleteStu(obj) {
     var iTr = obj.parentNode.parentNode;
     // 获取当前行中的所有单元格
     iTds = iTr.getElementsByTagName('td');
-    var id = iTds[1].innerText;
+    var groupId = iTds[1].innerText;
 
     //获取url
     var protocol = window.location.protocol;
@@ -11,11 +11,11 @@ function deleteStu(obj) {
     var proName = window.location.pathname.split("/")[1];
     var url = protocol + "//" + host + "/" + proName + "/groupController/deleteGroupById";
 
-    if (confirm("您确定要删除组为 " + id + " 的小组吗？")){
+    if (confirm("您确定要删除组为 " + groupId + " 的小组吗？")){
         $.ajax({
             type : 'post',
             url : url,
-            data : {id:id},
+            data : {groupId:groupId},
             success : function (data) {
                 if (data === "success") {
                     alert("删除成功");

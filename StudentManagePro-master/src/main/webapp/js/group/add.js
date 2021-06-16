@@ -7,10 +7,10 @@ function add() {
 
 function jQSubmit() {
     var data = {};
-    data.id = document.getElementById('groupId1').value;
-    data.grade = document.getElementById('deptId1').value;
-    data.clazz = document.getElementById('managerId1').value;
-    data.age = document.getElementById('leaderId1').value;
+    data.groupId = document.getElementById('groupId1').value;
+    data.deptId = document.getElementById('deptId1').value;
+    data.managerId = document.getElementById('managerId1').value;
+    data.leaderId = document.getElementById('leaderId1').value;
 
 
     //获取url
@@ -49,10 +49,10 @@ function sumbit() {
     // 获取表
     var iTable = document.getElementById('myTable');
     // 获取输入值
-    var stuId = document.getElementById('groupId1').value;
-    var grade = document.getElementById('deptId1').value;
-    var stuClass = document.getElementById('managerId1').value;
-    var age = document.getElementById('leaderId1').value;
+    var groupId = document.getElementById('groupId1').value;
+    var deptId = document.getElementById('deptId1').value;
+    var managerId = document.getElementById('managerId1').value;
+    var leaderId = document.getElementById('leaderId1').value;
     var nums = iTable.rows.length;
 
 
@@ -76,16 +76,16 @@ function sumbit() {
     iTd2.appendChild(document.createTextNode(nums));
     var iTd3 = document.createElement('td');
     iTd3.className = "col3";
-    iTd3.appendChild(document.createTextNode(stuId));
+    iTd3.appendChild(document.createTextNode(groupId));
     var iTd7 = document.createElement('td');
     iTd7.className = "col7";
-    iTd7.appendChild(document.createTextNode(grade));
+    iTd7.appendChild(document.createTextNode(deptId));
     var iTd8 = document.createElement('td');
     iTd8.className = "col8";
-    iTd8.appendChild(document.createTextNode(stuClass));
+    iTd8.appendChild(document.createTextNode(managerId));
     var iTd9 = document.createElement('td');
     iTd9.className = "col9";
-    iTd9.appendChild(document.createTextNode(age));
+    iTd9.appendChild(document.createTextNode(leaderId));
     var iTd10 = document.createElement('td');
     iTd10.className = "col10";
     var examine = document.createElement('input');

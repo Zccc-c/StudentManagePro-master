@@ -11,7 +11,7 @@ public interface LeaderMapper {
 
     int addLeader(Leader leader);
 
-    int deleteLeaderById(int id);
+    int deleteLeaderById(int leaderId);
 
     int updateLeader(Leader leader);
 }

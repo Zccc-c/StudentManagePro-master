@@ -7,9 +7,9 @@ function add() {
 
 function jQSubmit() {
     var data = {};
-    data.id = document.getElementById('deptId1').value;
-    data.name = document.getElementById('deptname1').value;
-    data.age = document.getElementById('manager1').value;
+    data.deptId = document.getElementById('deptId1').value;
+    data.deptName = document.getElementById('deptname1').value;
+    data.managerId = document.getElementById('manager1').value;
 
 
     //获取url
@@ -48,9 +48,9 @@ function sumbit() {
     // 获取表
     var iTable = document.getElementById('myTable');
     // 获取输入值
-    var stuId = document.getElementById('deptId1').value;
-    var name = document.getElementById('deptname1').value;
-    var age = document.getElementById('deptage1').value;
+    var deptId = document.getElementById('deptId1').value;
+    var deptName = document.getElementById('deptname1').value;
+    var managerId = document.getElementById('manager1').value;
     var nums = iTable.rows.length;
 
 
@@ -74,13 +74,13 @@ function sumbit() {
     iTd2.appendChild(document.createTextNode(nums));
     var iTd3 = document.createElement('td');
     iTd3.className = "col3";
-    iTd3.appendChild(document.createTextNode(stuId));
-    var iTd4 = document.createElement('td');
-    iTd4.className = "col4";
-    iTd4.appendChild(document.createTextNode(name));
+    iTd3.appendChild(document.createTextNode(deptId));
     var iTd9 = document.createElement('td');
     iTd9.className = "col9";
-    iTd9.appendChild(document.createTextNode(age));
+    iTd9.appendChild(document.createTextNode(managerId));
+    var iTd4 = document.createElement('td');
+    iTd4.className = "col4";
+    iTd4.appendChild(document.createTextNode(deptName));
     var iTd10 = document.createElement('td');
     iTd10.className = "col10";
     var examine = document.createElement('input');

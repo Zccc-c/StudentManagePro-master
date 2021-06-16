@@ -9,9 +9,9 @@ public interface DepartmentMapper {
 
     int addDepartment(Department department);
 
-    Department queryDepartmentById(int id);
+    Department queryDepartmentById(int deptId);
 
-    int deleteDepartmentById(int id);
+    int deleteDepartmentById(int deptId);
 
     int updateDepartment(Department department);
 }

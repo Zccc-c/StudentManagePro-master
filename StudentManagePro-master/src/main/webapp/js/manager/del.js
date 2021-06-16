@@ -3,7 +3,7 @@ function deleteStu(obj) {
     var iTr = obj.parentNode.parentNode;
     // 获取当前行中的所有单元格
     iTds = iTr.getElementsByTagName('td');
-    var id = iTds[4].innerText;
+    var managerId = iTds[4].innerText;
 
     //获取url
     var protocol = window.location.protocol;
@@ -11,11 +11,11 @@ function deleteStu(obj) {
     var proName = window.location.pathname.split("/")[1];
     var url = protocol + "//" + host + "/" + proName + "/managerController/deleteManagerById";
 
-    if (confirm("您确定要删除管理者号为 " + id + " 的管理者吗？")){
+    if (confirm("您确定要删除管理者号为 " + managerId + " 的管理者吗？")){
         $.ajax({
             type : 'post',
             url : url,
-            data : {id:id},
+            data : {managerId:managerId},
             success : function (data) {
                 if (data === "success") {
                     alert("删除成功");

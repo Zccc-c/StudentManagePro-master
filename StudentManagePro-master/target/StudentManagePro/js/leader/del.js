@@ -3,7 +3,7 @@ function deleteStu(obj) {
     var iTr = obj.parentNode.parentNode;
     // 获取当前行中的所有单元格
     iTds = iTr.getElementsByTagName('td');
-    var id = iTds[4].innerText;
+    var leaderId = iTds[4].innerText;
 
     //获取url
     var protocol = window.location.protocol;
@@ -11,11 +11,11 @@ function deleteStu(obj) {
     var proName = window.location.pathname.split("/")[1];
     var url = protocol + "//" + host + "/" + proName + "/leaderController/deleteLeaderById";
 
-    if (confirm("您确定要删除领导者号为 " + id + " 的领导者吗？")){
+    if (confirm("您确定要删除领导者号为 " + leaderId + " 的领导者吗？")){
         $.ajax({
             type : 'post',
             url : url,
-            data : {id:id},
+            data : {leaderId:leaderId},
             success : function (data) {
                 if (data === "success") {
                     alert("删除成功");

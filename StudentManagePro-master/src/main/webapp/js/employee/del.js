@@ -3,7 +3,7 @@ function deleteStu(obj) {
     var iTr = obj.parentNode.parentNode;
     // 获取当前行中的所有单元格
     iTds = iTr.getElementsByTagName('td');
-    var id = iTds[4].innerText;
+    var empId = iTds[4].innerText;
 
     //获取url
     var protocol = window.location.protocol;
@@ -11,11 +11,11 @@ function deleteStu(obj) {
     var proName = window.location.pathname.split("/")[1];
     var url = protocol + "//" + host + "/" + proName + "/employeeController/deleteEmployeeById";
 
-    if (confirm("您确定要删除员工号为 " + id + " 的员工吗？")){
+    if (confirm("您确定要删除员工号为 " + empId + " 的员工吗？")){
         $.ajax({
             type : 'post',
             url : url,
-            data : {id:id},
+            data : {empId:empId},
             success : function (data) {
                 if (data === "success") {
                     alert("删除成功");

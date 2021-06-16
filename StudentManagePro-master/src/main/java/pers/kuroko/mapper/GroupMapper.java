@@ -11,7 +11,7 @@ public interface GroupMapper {
 
     int addGroup(Group group);
 
-    int deleteGroupById(int id);
+    int deleteGroupById(int groupId);
 
     int updateGroup(Group group);
 }

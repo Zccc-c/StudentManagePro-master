@@ -7,13 +7,13 @@ function add() {
 
 function jQSubmit() {
     var data = {};
-    data.id = document.getElementById('groupId1').value;
-    data.name = document.getElementById('leadername1').value;
-    data.insitute= document.getElementById('leaderEmail1').value;
-    data.age = document.getElementById('leaderId1').value;
+    data.groupId = document.getElementById('groupId1').value;
+    data.leaderName = document.getElementById('leadername1').value;
+    data.leaderEmail= document.getElementById('leaderEmail1').value;
+    data.leaderId = document.getElementById('leaderId1').value;
     var sexSelect = document.getElementById('sex1');
     var sexIndex = sexSelect.selectedIndex;
-    data.sex = sexSelect.options[sexIndex].value;
+    data.leaderGender = sexSelect.options[sexIndex].value;
 
     //获取url
     var protocol = window.location.protocol;
@@ -51,13 +51,13 @@ function sumbit() {
     // 获取表
     var iTable = document.getElementById('myTable');
     // 获取输入值
-    var stuId = document.getElementById('groupId1').value;
-    var name = document.getElementById('leadername1').value;
-    var colg = document.getElementById('leaderEmail1').value;
-    var age = document.getElementById('leaderId1').value;
+    var groupId = document.getElementById('groupId1').value;
+    var leaderName = document.getElementById('leadername1').value;
+    var leaderEmail = document.getElementById('leaderEmail1').value;
+    var leaderId = document.getElementById('leaderId1').value;
     var sexSelect = document.getElementById('sex1');
     var sexIndex = sexSelect.selectedIndex;
-    var sex = sexSelect.options[sexIndex].value;
+    var leaderGender = sexSelect.options[sexIndex].value;
     var nums = iTable.rows.length;
 
 
@@ -81,21 +81,21 @@ function sumbit() {
     iTd2.appendChild(document.createTextNode(nums));
     var iTd3 = document.createElement('td');
     iTd3.className = "col3";
-    iTd3.appendChild(document.createTextNode(stuId));
+    iTd3.appendChild(document.createTextNode(groupId));
     var iTd4 = document.createElement('td');
     iTd4.className = "col4";
-    iTd4.appendChild(document.createTextNode(name));
+    iTd4.appendChild(document.createTextNode(leaderName));
     var iTd5 = document.createElement('td');
     iTd5.className = "col5";
-    iTd5.appendChild(document.createTextNode(colg));
+    iTd5.appendChild(document.createTextNode(leaderEmail));
     var iTd9 = document.createElement('td');
     iTd9.className = "col9";
-    iTd9.appendChild(document.createTextNode(age));
+    iTd9.appendChild(document.createTextNode(leaderId));
     var iTd10 = document.createElement('td');
     iTd10.className = "col10";
     var iTd11 = document.createElement('td');
     iTd11.className = "col11";
-    iTd11.appendChild(document.createTextNode(sex));
+    iTd11.appendChild(document.createTextNode(leaderGender));
     var examine = document.createElement('input');
     examine.id = 'examine';
     examine.setAttribute('type','button');

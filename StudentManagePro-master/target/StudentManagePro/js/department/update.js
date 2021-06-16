@@ -13,7 +13,7 @@ function update(obj) {
     // 将新增框架中的输入框中内容设为当前行对应的内容
     document.getElementById('deptId2').value = iTds[1].innerText;
     document.getElementById('deptname2').value = iTds[2].innerText;
-    document.getElementById('manager2').value = iTds[4].innerText;
+    document.getElementById('manager2').value = iTds[3].innerText;
 
 }
 
