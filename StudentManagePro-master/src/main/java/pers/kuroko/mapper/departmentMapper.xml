@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+    <select id="queryDepartmentById" parameterType="int" resultType="Department">
+        select * from department where deptId = #{id}
+    </select>
+    <select id="queryAllDepartment" resultType="Department">
+        select * from department
+    </select>
+    <insert id="addDepartment" parameterType="Department">
+        insert into department(deptId,managerId,deptName) values (#{deptId}, #{manageId}, #{deptName})
+    </insert>
+    <delete id="deleteDepartmentById" parameterType="int">
+        delete from department where deptId = #{id}
+    </delete>
+    <update id="updateDepartment" parameterType="Department">
+        update department set managerId = #{managerId},deptName = #{deptName} where deptId = #{id}
+    </update>
+
+</mapper>

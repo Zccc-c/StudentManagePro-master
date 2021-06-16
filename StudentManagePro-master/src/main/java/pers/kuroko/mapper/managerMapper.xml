@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+    <select id="queryManagerById" parameterType="int" resultType="Leader">
+        select * from manager where managerId = #{managerId}
+    </select>
+    <select id="queryAllManager" resultType="manager">
+        select * from manager
+    </select>
+    <insert id="addManager" parameterType="Manager">
+        insert into manager(deptId,managerId,managerName,managerGender,managerEmail) values (#{deptId}, #{managerId}, #{managerName},#{managerGender},#{managerEmail})
+    </insert>
+    <delete id="deleteManagerById" parameterType="int">
+        delete from manager where managerId = #{id}
+    </delete>
+    <update id="updateManager" parameterType="Manager">
+        update manager set deptId = #{deptId},managerName = #{managerName},managerGender = #{ManagerGender},managerEmail = #{managerEmail} where managerId = #{managerId}
+    </update>
+
+</mapper>

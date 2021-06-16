@@ -51,5 +51,19 @@
     <bean id="studentService" class="pers.kuroko.service.StudentServiceImpl">
         <property name="stuMapper" ref="stuMapper" />
     </bean>
-
+    <bean id = "departmentService" class = "pers.kuroko.service.DepartmentServiceImpl">
+        <property name="departmentMapper" ref = "departmentMapper"/>
+    </bean>
+    <bean id = "employeeService" class = "pers.kuroko.service.EmployeeServiceImpl">
+        <property name="employeeMapper" ref = "employeeMapper"/>
+    </bean>
+    <bean id = "groupService" class = "pers.kuroko.service.GroupServiceImpl">
+        <property name="groupMapper" ref = "groupMapper"/>
+    </bean>
+    <bean id = "leaderService" class = "pers.kuroko.service.LeaderServiceImpl">
+        <property name="leaderMapper" ref = "leaderMapper"/>
+    </bean>
+    <bean id = "managerService" class = "pers.kuroko.service.ManagerServiceImpl">
+        <property name="managerMapper" ref = "managerMapper"/>
+    </bean>
 </beans>

@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper>
+    <select id="queryGroupById" parameterType="int" resultType="Employee">
+        select * from group where groupid = #{groupid}
+    </select>
+    <select id="queryAllGroup" resultType="Group">
+        select * from group
+    </select>
+    <insert id="addGroup" parameterType="Group">
+        insert into group(groupid,leaderid,deptid,managerid) values (#{groupid}, #{leaderid}, #{deptid},#{managerid})
+    </insert>
+    <delete id="deleteGroupById" parameterType="int">
+        delete from group where groupid = #{id}
+    </delete>
+    <update id="updateGroup" parameterType="Group">
+        update group set leaderid = #{leaderid},deptid = #{deptid},managerid = #{managerid} where groupid = #{groupid}
+    </update>
+
+</mapper>
