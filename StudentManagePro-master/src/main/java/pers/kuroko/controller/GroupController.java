@@ -44,8 +44,8 @@ public class GroupController {
 
     @ResponseBody
     @RequestMapping(value = "deleteGroupById")
-    public String deleteGroupById(int id){
-        int i = groupService.deleteGroupById(id);
+    public String deleteGroupById(int groupId){
+        int i = groupService.deleteGroupById(groupId);
         if(i > 0){
             return "success";
         }else {

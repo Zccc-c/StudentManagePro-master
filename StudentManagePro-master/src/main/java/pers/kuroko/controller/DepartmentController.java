@@ -43,8 +43,8 @@ public class DepartmentController {
 
     @ResponseBody
     @RequestMapping(value = "deleteDepartmentById")
-    public String deleteDepartmentById(int id){
-        int i = departmentService.deleteDepartmentById(id);
+    public String deleteDepartmentById(int deptId){
+        int i = departmentService.deleteDepartmentById(deptId);
         if(i > 0){
             return "success";
         }else {

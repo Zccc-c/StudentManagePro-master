@@ -157,7 +157,7 @@
         <table id="updateMessageTable">
             <tr>
                 <td class="updateTableTd1">部门号</td>
-                <td class="updateTableTd2"><input type="text" id="deptId2" readonly /></td>
+                <td class="updateTableTd2"><input type="text" id="deptId2"  /></td>
             </tr>
             <tr>
                 <td class="updateTableTd1">姓名</td>
@@ -174,7 +174,7 @@
             </tr>
             <tr>
                 <td class="updateTableTd1">管理者号</td>
-                <td class="updateTableTd2"><input type="text" id="managerId2" /></td>
+                <td class="updateTableTd2"><input type="text" id="managerId2" readonly/></td>
             </tr>
             <tr>
                 <td class="updateTableTd1">邮箱</td>

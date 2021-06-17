@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pers.kuroko.mapper.GroupMapper">
-    <select id="queryGroupById" parameterType="int" resultType="Employee">
+    <select id="queryGroupById" parameterType="int" resultType="Group">
         select * from Bgroup where groupId = #{groupId}
     </select>
     <select id="queryAllGroup" resultType="Group">
@@ -11,7 +11,7 @@
         insert into Bgroup(groupId,leaderId,deptId,managerId) values (#{groupId}, #{leaderId}, #{deptId},#{managerId})
     </insert>
     <delete id="deleteGroupById" parameterType="int">
-        delete from Bgroup where groupId = #{id}
+        delete from Bgroup where groupId = #{groupId}
     </delete>
     <update id="updateGroup" parameterType="Group">
         update Bgroup set leaderId = #{leaderId},deptId = #{deptId},managerId = #{managerId} where groupId = #{groupId}

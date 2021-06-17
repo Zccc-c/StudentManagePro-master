@@ -14,7 +14,7 @@
         delete from manager where managerId = #{managerId}
     </delete>
     <update id="updateManager" parameterType="Manager">
-        update manager set deptId = #{deptId},managerName = #{managerName},managerGender = #{ManagerGender},managerEmail = #{managerEmail} where managerId = #{managerId}
+        update manager set deptId = #{deptId},managerName = #{managerName},managerGender = #{managerGender},managerEmail = #{managerEmail} where managerId = #{managerId}
     </update>
 
 </mapper>

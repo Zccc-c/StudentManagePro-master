@@ -45,8 +45,8 @@ public class EmployeeController {
 
     @ResponseBody
     @RequestMapping(value = "deleteEmployeeById")
-    public String deleteEmployeeById(int id){
-        int i = employeeService.deleteEmployeeById(id);
+    public String deleteEmployeeById(int empId){
+        int i = employeeService.deleteEmployeeById(empId);
         if(i > 0){
             return "success";
         }else {

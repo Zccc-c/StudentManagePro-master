@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="pers.kuroko.entity.Student" %>
+<%@ page import="pers.kuroko.entity.Employee" %>
 <%@ page import="pers.kuroko.entity.Department" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -51,11 +52,11 @@
         <table cellspacing="0px" id="myTable">
             <thead>
             <tr>
-                <%--                <th class="col1"><input type="checkbox" onclick="checkAll(this)"/></th>--%>
+<%--                <th class="col1"><input type="checkbox" onclick="checkAll(this)"/></th>--%>
                 <th class="col2">序号</th>
                 <th class="col3">部门号</th>
-                <th class="col9">管理者号</th>
                 <th class="col4">部门名称</th>
+                <th class="col9">管理者号</th>
                 <th class="col10">操作</th>
             </tr>
             </thead>
@@ -69,25 +70,25 @@
                     i++;
                     if (i % 2 != 0) {
             %>
-            <tr class="mainTbodyTr1">
-                    <%
+                <tr class="mainTbodyTr1">
+             <%
                     } else {
               %>
-            <tr class="mainTbodyTr2">
-                <%
+                    <tr class="mainTbodyTr2">
+              <%
                     }
-                %>
-                <%--                    <td class="col1"><input type="checkbox" name="item" /></td>--%>
-                <td class="col2"><%=i%></td>
-                <td class="col3"><%=department.getDeptId()%></td>
+              %>
+<%--                    <td class="col1"><input type="checkbox" name="item" /></td>--%>
+                    <td class="col2"><%=i%></td>
+                    <td class="col3"><%=department.getDeptId()%></td>
+                    <td class="col4"><%=department.getDeptName()%></td>
                 <td class="col9"><%=department.getManagerId()%></td>
-                <td class="col4"><%=department.getDeptName()%></td>
-                <td class="col10">
-                    <input id="examine" type="button" value="查看" onclick="examine(this)">
-                    <input id="update" type="button" value="更新" onclick="update(this)">
-                    <input id="delete" type="button" value="删除" onclick="deleteStu(this)">
-                </td>
-            </tr>
+                    <td class="col10">
+                        <input id="examine" type="button" value="查看" onclick="examine(this)">
+                        <input id="update" type="button" value="更新" onclick="update(this)">
+                        <input id="delete" type="button" value="删除" onclick="deleteStu(this)">
+                    </td>
+                </tr>
             <%
                 }
             %>
@@ -118,12 +119,12 @@
                 <td class="addTableTd2"><input type="text" id="deptId1" /></td>
             </tr>
             <tr>
-                <td class="addTableTd1">管理者号</td>
-                <td class="addTableTd2"><input type="text" id="manager1" /></td>
-            </tr>
-            <tr>
                 <td class="addTableTd1">部门名称</td>
                 <td class="addTableTd2"><input type="text" id="deptname1" /></td>
+            </tr>
+            <tr>
+                <td class="addTableTd1">管理者号</td>
+                <td class="addTableTd2"><input type="text" id="manager1" /></td>
             </tr>
 
         </table>
@@ -143,12 +144,12 @@
                 <td class="updateTableTd2"><input type="text" id="deptId2" readonly /></td>
             </tr>
             <tr>
-                <td class="updateTableTd1">管理者号</td>
-                <td class="updateTableTd2"><input type="text" id="manager2" /></td>
-            </tr>
-            <tr>
                 <td class="updateTableTd1">部门名称</td>
                 <td class="updateTableTd2"><input type="text" id="deptname2" /></td>
+            </tr>
+            <tr>
+                <td class="updateTableTd1">管理者号</td>
+                <td class="updateTableTd2"><input type="text" id="manager2" /></td>
             </tr>
         </table>
     </div>
@@ -167,12 +168,12 @@
                 <td class="examineTableTd2"><input type="text" id="deptId3" readonly="readonly" /></td>
             </tr>
             <tr>
-                <td class="examineTableTd1">管理者号</td>
-                <td class="examineTableTd2"><input type="text" id="manager3" readonly /></td>
-            </tr>
-            <tr>
                 <td class="examineTableTd1">部门名称</td>
                 <td class="examineTableTd2"><input type="text" id="deptname3" readonly="readonly" /></td>
+            </tr>
+            <tr>
+                <td class="examineTableTd1">管理者号</td>
+                <td class="examineTableTd2"><input type="text" id="manager3" readonly /></td>
             </tr>
         </table>
     </div>

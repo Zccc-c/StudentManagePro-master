@@ -7,11 +7,11 @@
     <select id="queryAllLeader" resultType="leader">
         select * from leader
     </select>
-    <insert id="addLeader" parameterType="Employee">
+    <insert id="addLeader" parameterType="Leader">
         insert into leader(groupId,leaderId,leaderName,leaderGender,leaderEmail) values (#{groupId}, #{leaderId}, #{leaderName},#{leaderGender},#{leaderEmail})
     </insert>
     <delete id="deleteLeaderById" parameterType="int">
-        delete from leader where leaderId = #{id}
+        delete from leader where leaderId = #{leaderId}
     </delete>
     <update id="updateLeader" parameterType="Leader">
         update leader set groupId = #{groupId},leaderName = #{leaderName},leaderGender = #{leaderGender},leaderEmail = #{leaderEmail} where leaderId = #{leaderId}

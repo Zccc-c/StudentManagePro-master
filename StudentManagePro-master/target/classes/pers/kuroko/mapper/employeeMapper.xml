@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pers.kuroko.mapper.EmployeeMapper">
     <select id="queryEmployeeById" parameterType="int" resultType="Employee">
-        select * from employee where empId = #{id}
+        select * from employee where empId = #{empId}
     </select>
     <select id="queryAllEmployee" resultType="Employee">
         select * from employee
@@ -11,10 +11,10 @@
         insert into employee(groupId,empId,empName,gender,email) values (#{groupId}, #{empId}, #{empName},#{gender},#{email})
     </insert>
     <delete id="deleteEmployeeById" parameterType="int">
-        delete from employee where empId = #{id}
+        delete from employee where empId = #{empId}
     </delete>
     <update id="updateEmployee" parameterType="Employee">
-        update employee set groupId = #{groupId},empName = #{empName},gender = #{gender},email = #{email} where deptId = #{id}
+        update employee set groupId = #{groupId},empName = #{empName},gender = #{gender},email = #{email} where empId = #{empId}
     </update>
 
 </mapper>

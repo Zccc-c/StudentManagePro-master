@@ -27,7 +27,7 @@ function preservation() {
     var clazz = document.getElementById('managerId2').value;
     var data = {};
     data.groupId = id;
-    data.LeaderId = age;
+    data.leaderId = age;
     data.deptId = grade;
     data.managerId = clazz;
     var protocol = window.location.protocol;

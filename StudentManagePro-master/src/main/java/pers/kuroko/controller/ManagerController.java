@@ -44,8 +44,8 @@ public class ManagerController {
 
     @ResponseBody
     @RequestMapping(value = "deleteManagerById")
-    public String deleteManagerById(int id){
-        int i = managerService.deleteManagerById(id);
+    public String deleteManagerById(int managerId){
+        int i = managerService.deleteManagerById(managerId);
         if(i > 0){
             return "success";
         }else {

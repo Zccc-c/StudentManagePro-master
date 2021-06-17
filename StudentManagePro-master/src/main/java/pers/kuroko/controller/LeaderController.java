@@ -44,8 +44,8 @@ public class LeaderController {
 
     @ResponseBody
     @RequestMapping(value = "deleteLeaderById")
-    public String deleteLeaderById(int id){
-        int i = leaderService.deleteLeaderById(id);
+    public String deleteLeaderById(int leaderId){
+        int i = leaderService.deleteLeaderById(leaderId);
         if(i > 0){
             return "success";
         }else {

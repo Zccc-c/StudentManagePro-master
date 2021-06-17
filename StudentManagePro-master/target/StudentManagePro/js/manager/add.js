@@ -10,7 +10,7 @@ function jQSubmit() {
     data.deptId = document.getElementById('deptId1').value;
     data.managerName = document.getElementById('managername1').value;
     data.managerEmail= document.getElementById('managerEmail1').value;
-    data.managerI = document.getElementById('managerId1').value;
+    data.managerId = document.getElementById('managerId1').value;
     var sexSelect = document.getElementById('sex1');
     var sexIndex = sexSelect.selectedIndex;
     data.managerGender = sexSelect.options[sexIndex].value;
